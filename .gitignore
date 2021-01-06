@@ -3,12 +3,12 @@
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
 
-Sample/Library/*
-Sample/Temp/*
-Sample/Obj/*
-Sample/Build/*
-Sample/Logs/*
-Sample/MemoryCaptures/*
+BSWForPersonal/Library/*
+BSWForPersonal/Temp/*
+BSWForPersonal/Obj/*
+BSWForPersonal/Build/*
+BSWForPersonal/Logs/*
+BSWForPersonal/MemoryCaptures/*
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
