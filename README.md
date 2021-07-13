@@ -1,2 +1,2 @@
-# BabySharkWorld
-Baby shark world project for personal
+# FacebookUnitySDK
+Sample project to intergrate a facebook SDK 
