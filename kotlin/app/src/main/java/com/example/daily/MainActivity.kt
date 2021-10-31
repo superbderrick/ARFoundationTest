@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         for(stepTestI in 1 until 10 step 3) {
 
         }
-        //3의 배수 or 5의 배수 
+        //3의 배수 or 5의 배수
 
 
     }
