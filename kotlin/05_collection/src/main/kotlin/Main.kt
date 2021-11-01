@@ -36,5 +36,5 @@ fun setTest() {
     val setTest = setOf<String>("test","test")
     val setmTest = mutableSetOf<Int>(1,2,3)
     val intArray = intArrayOf(1,2,3)
-    
+
 }
