@@ -1,9 +1,13 @@
+import java.util.*
+
 fun main(args: Array<String>) {
     println("Hello World!")
 
-    val testString : String  ="(()())(())"
 
-    var finalcount = Solution.checkParent(testString)
+
+    val testString : String  ="(()())(())(()(()))"
+
+    var finalcount = Solution.removeOuterParentheses(testString)
 
     println(finalcount)
 }
@@ -11,23 +15,32 @@ fun main(args: Array<String>) {
 class Solution () {
 
     companion object {
-        fun checkParent( sentences:String): Int {
-            var count = 0
-            var n = sentences.length
-            var stack = TestStack(sentences)
+        private const val OPEN_PAREN = '('
+        private const val CLOSED_PAREN = ')'
 
+        fun removeOuterParentheses(S: String): String {
+            val stack = LinkedList<Char>()
+            val builder = StringBuilder()
 
-            for(i:Int in 0.. n-1 step (1)) {
-                if (sentences[i] == '(') {
-                    count++
-                    stack.push(sentences[i])
-                } else if(sentences[i] == ')') {
-                    count--
-                    stack.pop()
+            for(ch in S){
+                when(ch){
+                    OPEN_PAREN -> {
+                        if(stack.isNotEmpty()) {
+                            builder.append(OPEN_PAREN)
+                        }
+                        stack.push(OPEN_PAREN)
+                    }
+                    CLOSED_PAREN -> {
+                        stack.pop()
+                        if(stack.isNotEmpty()){
+                            builder.append(CLOSED_PAREN)
+                        }
+                    }
+                    else -> {}
                 }
-
             }
-            return count
+
+            return builder.toString()
         }
     }
 }
