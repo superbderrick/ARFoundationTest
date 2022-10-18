@@ -1,0 +1,257 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ccf793b7ca1cc645b9cd36d753b8e3c, type: 3}
+  m_Name: User
+  m_EditorClassIdentifier: 
+  url: https://hasura-unity.herokuapp.com/v1/graphql
+  queries:
+  - name: GetUsers
+    type: 0
+    query: "query GetUsers{\n    users{\n        id\n        name\n        last_seen\n       
+      created_at\n    }\n}"
+    queryString: users
+    returnType: users
+    queryOptions:
+    - users
+    - users_aggregate
+    - users_by_pk
+    fields:
+    - index: 1
+      name: id
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: created_at
+        type: timestamptz
+      - name: id
+        type: String
+      - name: last_seen
+        type: timestamptz
+      - name: name
+        type: String
+      hasChanged: 0
+    - index: 3
+      name: name
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: created_at
+        type: timestamptz
+      - name: id
+        type: String
+      - name: last_seen
+        type: timestamptz
+      - name: name
+        type: String
+      hasChanged: 0
+    - index: 2
+      name: last_seen
+      type: timestamptz
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: created_at
+        type: timestamptz
+      - name: id
+        type: String
+      - name: last_seen
+        type: timestamptz
+      - name: name
+        type: String
+      hasChanged: 0
+    - index: 0
+      name: created_at
+      type: timestamptz
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: created_at
+        type: timestamptz
+      - name: id
+        type: String
+      - name: last_seen
+        type: timestamptz
+      - name: name
+        type: String
+      hasChanged: 0
+    isComplete: 0
+  mutations:
+  - name: CreateNewUser
+    type: 1
+    query: "mutation CreateNewUser{\n    insert_users(  objects :{ id :desc, name
+      :\"sdf\"} ){\n        returning{\n            id\n            name\n           
+      last_seen\n            created_at\n        }\n        affected_rows\n    }\n}"
+    queryString: insert_users
+    returnType: users_mutation_response
+    queryOptions:
+    - insert_users
+    - update_users
+    fields:
+    - index: 1
+      name: returning
+      type: users
+      parentIndexes: 
+      hasSubField: 1
+      possibleFields:
+      - name: affected_rows
+        type: Int
+      - name: returning
+        type: users
+      hasChanged: 0
+    - index: 1
+      name: id
+      type: String
+      parentIndexes: 00000000
+      hasSubField: 0
+      possibleFields:
+      - name: created_at
+        type: timestamptz
+      - name: id
+        type: String
+      - name: last_seen
+        type: timestamptz
+      - name: name
+        type: String
+      hasChanged: 0
+    - index: 3
+      name: name
+      type: String
+      parentIndexes: 00000000
+      hasSubField: 0
+      possibleFields:
+      - name: created_at
+        type: timestamptz
+      - name: id
+        type: String
+      - name: last_seen
+        type: timestamptz
+      - name: name
+        type: String
+      hasChanged: 0
+    - index: 2
+      name: last_seen
+      type: timestamptz
+      parentIndexes: 00000000
+      hasSubField: 0
+      possibleFields:
+      - name: created_at
+        type: timestamptz
+      - name: id
+        type: String
+      - name: last_seen
+        type: timestamptz
+      - name: name
+        type: String
+      hasChanged: 0
+    - index: 0
+      name: created_at
+      type: timestamptz
+      parentIndexes: 00000000
+      hasSubField: 0
+      possibleFields:
+      - name: created_at
+        type: timestamptz
+      - name: id
+        type: String
+      - name: last_seen
+        type: timestamptz
+      - name: name
+        type: String
+      hasChanged: 0
+    - index: 0
+      name: affected_rows
+      type: Int
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: affected_rows
+        type: Int
+      - name: returning
+        type: users
+      hasChanged: 0
+    isComplete: 1
+  subscriptions:
+  - name: SubscribeToUsers
+    type: 2
+    query: "subscription SubscribeToUsers{\n    users{\n        id\n        name\n       
+      last_seen\n        created_at\n    }\n}"
+    queryString: users
+    returnType: users
+    queryOptions:
+    - users
+    - users_aggregate
+    - users_by_pk
+    fields:
+    - index: 1
+      name: id
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: created_at
+        type: timestamptz
+      - name: id
+        type: String
+      - name: last_seen
+        type: timestamptz
+      - name: name
+        type: String
+      hasChanged: 0
+    - index: 3
+      name: name
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: created_at
+        type: timestamptz
+      - name: id
+        type: String
+      - name: last_seen
+        type: timestamptz
+      - name: name
+        type: String
+      hasChanged: 0
+    - index: 2
+      name: last_seen
+      type: timestamptz
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: created_at
+        type: timestamptz
+      - name: id
+        type: String
+      - name: last_seen
+        type: timestamptz
+      - name: name
+        type: String
+      hasChanged: 0
+    - index: 0
+      name: created_at
+      type: timestamptz
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: created_at
+        type: timestamptz
+      - name: id
+        type: String
+      - name: last_seen
+        type: timestamptz
+      - name: name
+        type: String
+      hasChanged: 0
+    isComplete: 0
+  loading: 0

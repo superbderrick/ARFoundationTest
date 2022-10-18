@@ -1,0 +1,479 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ccf793b7ca1cc645b9cd36d753b8e3c, type: 3}
+  m_Name: Pokemon
+  m_EditorClassIdentifier: 
+  url: https://graphql-pokemon.now.sh/
+  queries:
+  - name: AllPokemon
+    type: 0
+    query: "query AllPokemon{\n    pokemons(  first :100 ){\n        id\n       
+      number\n        name\n        weight{\n            minimum\n            maximum\n       
+      }\n    }\n}"
+    queryString: pokemons
+    returnType: Pokemon
+    queryOptions:
+    - pokemons
+    - pokemon
+    fields:
+    - index: 0
+      name: id
+      type: ID
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: id
+        type: ID
+      - name: number
+        type: String
+      - name: name
+        type: String
+      - name: weight
+        type: PokemonDimension
+      - name: height
+        type: PokemonDimension
+      - name: classification
+        type: String
+      - name: types
+        type: String
+      - name: resistant
+        type: String
+      - name: attacks
+        type: PokemonAttack
+      - name: weaknesses
+        type: String
+      - name: fleeRate
+        type: Float
+      - name: maxCP
+        type: Int
+      - name: evolutions
+        type: Pokemon
+      - name: evolutionRequirements
+        type: PokemonEvolutionRequirement
+      - name: maxHP
+        type: Int
+      - name: image
+        type: String
+      hasChanged: 0
+    - index: 1
+      name: number
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: id
+        type: ID
+      - name: number
+        type: String
+      - name: name
+        type: String
+      - name: weight
+        type: PokemonDimension
+      - name: height
+        type: PokemonDimension
+      - name: classification
+        type: String
+      - name: types
+        type: String
+      - name: resistant
+        type: String
+      - name: attacks
+        type: PokemonAttack
+      - name: weaknesses
+        type: String
+      - name: fleeRate
+        type: Float
+      - name: maxCP
+        type: Int
+      - name: evolutions
+        type: Pokemon
+      - name: evolutionRequirements
+        type: PokemonEvolutionRequirement
+      - name: maxHP
+        type: Int
+      - name: image
+        type: String
+      hasChanged: 0
+    - index: 2
+      name: name
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: id
+        type: ID
+      - name: number
+        type: String
+      - name: name
+        type: String
+      - name: weight
+        type: PokemonDimension
+      - name: height
+        type: PokemonDimension
+      - name: classification
+        type: String
+      - name: types
+        type: String
+      - name: resistant
+        type: String
+      - name: attacks
+        type: PokemonAttack
+      - name: weaknesses
+        type: String
+      - name: fleeRate
+        type: Float
+      - name: maxCP
+        type: Int
+      - name: evolutions
+        type: Pokemon
+      - name: evolutionRequirements
+        type: PokemonEvolutionRequirement
+      - name: maxHP
+        type: Int
+      - name: image
+        type: String
+      hasChanged: 0
+    - index: 3
+      name: weight
+      type: PokemonDimension
+      parentIndexes: 
+      hasSubField: 1
+      possibleFields:
+      - name: id
+        type: ID
+      - name: number
+        type: String
+      - name: name
+        type: String
+      - name: weight
+        type: PokemonDimension
+      - name: height
+        type: PokemonDimension
+      - name: classification
+        type: String
+      - name: types
+        type: String
+      - name: resistant
+        type: String
+      - name: attacks
+        type: PokemonAttack
+      - name: weaknesses
+        type: String
+      - name: fleeRate
+        type: Float
+      - name: maxCP
+        type: Int
+      - name: evolutions
+        type: Pokemon
+      - name: evolutionRequirements
+        type: PokemonEvolutionRequirement
+      - name: maxHP
+        type: Int
+      - name: image
+        type: String
+      hasChanged: 0
+    - index: 0
+      name: minimum
+      type: String
+      parentIndexes: 03000000
+      hasSubField: 0
+      possibleFields:
+      - name: minimum
+        type: String
+      - name: maximum
+        type: String
+      hasChanged: 0
+    - index: 1
+      name: maximum
+      type: String
+      parentIndexes: 03000000
+      hasSubField: 0
+      possibleFields:
+      - name: minimum
+        type: String
+      - name: maximum
+        type: String
+      hasChanged: 0
+    isComplete: 1
+  - name: PokemonByName
+    type: 0
+    query: "query PokemonByName{\n    pokemon(  name :\"Bulbasaur\" ){\n        id\n       
+      number\n        name\n        attacks{\n            fast{\n               
+      name\n                type\n                damage\n        }\n           
+      special{\n                name\n                type\n                damage\n           
+      }\n        }\n    }\n}"
+    queryString: pokemon
+    returnType: Pokemon
+    queryOptions:
+    - pokemons
+    - pokemon
+    fields:
+    - index: 0
+      name: id
+      type: ID
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: id
+        type: ID
+      - name: number
+        type: String
+      - name: name
+        type: String
+      - name: weight
+        type: PokemonDimension
+      - name: height
+        type: PokemonDimension
+      - name: classification
+        type: String
+      - name: types
+        type: String
+      - name: resistant
+        type: String
+      - name: attacks
+        type: PokemonAttack
+      - name: weaknesses
+        type: String
+      - name: fleeRate
+        type: Float
+      - name: maxCP
+        type: Int
+      - name: evolutions
+        type: Pokemon
+      - name: evolutionRequirements
+        type: PokemonEvolutionRequirement
+      - name: maxHP
+        type: Int
+      - name: image
+        type: String
+      hasChanged: 0
+    - index: 1
+      name: number
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: id
+        type: ID
+      - name: number
+        type: String
+      - name: name
+        type: String
+      - name: weight
+        type: PokemonDimension
+      - name: height
+        type: PokemonDimension
+      - name: classification
+        type: String
+      - name: types
+        type: String
+      - name: resistant
+        type: String
+      - name: attacks
+        type: PokemonAttack
+      - name: weaknesses
+        type: String
+      - name: fleeRate
+        type: Float
+      - name: maxCP
+        type: Int
+      - name: evolutions
+        type: Pokemon
+      - name: evolutionRequirements
+        type: PokemonEvolutionRequirement
+      - name: maxHP
+        type: Int
+      - name: image
+        type: String
+      hasChanged: 0
+    - index: 2
+      name: name
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: id
+        type: ID
+      - name: number
+        type: String
+      - name: name
+        type: String
+      - name: weight
+        type: PokemonDimension
+      - name: height
+        type: PokemonDimension
+      - name: classification
+        type: String
+      - name: types
+        type: String
+      - name: resistant
+        type: String
+      - name: attacks
+        type: PokemonAttack
+      - name: weaknesses
+        type: String
+      - name: fleeRate
+        type: Float
+      - name: maxCP
+        type: Int
+      - name: evolutions
+        type: Pokemon
+      - name: evolutionRequirements
+        type: PokemonEvolutionRequirement
+      - name: maxHP
+        type: Int
+      - name: image
+        type: String
+      hasChanged: 0
+    - index: 8
+      name: attacks
+      type: PokemonAttack
+      parentIndexes: 
+      hasSubField: 1
+      possibleFields:
+      - name: id
+        type: ID
+      - name: number
+        type: String
+      - name: name
+        type: String
+      - name: weight
+        type: PokemonDimension
+      - name: height
+        type: PokemonDimension
+      - name: classification
+        type: String
+      - name: types
+        type: String
+      - name: resistant
+        type: String
+      - name: attacks
+        type: PokemonAttack
+      - name: weaknesses
+        type: String
+      - name: fleeRate
+        type: Float
+      - name: maxCP
+        type: Int
+      - name: evolutions
+        type: Pokemon
+      - name: evolutionRequirements
+        type: PokemonEvolutionRequirement
+      - name: maxHP
+        type: Int
+      - name: image
+        type: String
+      hasChanged: 0
+    - index: 0
+      name: fast
+      type: Attack
+      parentIndexes: 03000000
+      hasSubField: 1
+      possibleFields:
+      - name: fast
+        type: Attack
+      - name: special
+        type: Attack
+      hasChanged: 0
+    - index: 0
+      name: name
+      type: String
+      parentIndexes: 0300000004000000
+      hasSubField: 0
+      possibleFields:
+      - name: name
+        type: String
+      - name: type
+        type: String
+      - name: damage
+        type: Int
+      hasChanged: 0
+    - index: 1
+      name: type
+      type: String
+      parentIndexes: 0300000004000000
+      hasSubField: 0
+      possibleFields:
+      - name: name
+        type: String
+      - name: type
+        type: String
+      - name: damage
+        type: Int
+      hasChanged: 0
+    - index: 2
+      name: damage
+      type: Int
+      parentIndexes: 0300000004000000
+      hasSubField: 0
+      possibleFields:
+      - name: name
+        type: String
+      - name: type
+        type: String
+      - name: damage
+        type: Int
+      hasChanged: 0
+    - index: 1
+      name: special
+      type: Attack
+      parentIndexes: 03000000
+      hasSubField: 1
+      possibleFields:
+      - name: fast
+        type: Attack
+      - name: special
+        type: Attack
+      hasChanged: 0
+    - index: 0
+      name: name
+      type: String
+      parentIndexes: 0300000008000000
+      hasSubField: 0
+      possibleFields:
+      - name: name
+        type: String
+      - name: type
+        type: String
+      - name: damage
+        type: Int
+      hasChanged: 0
+    - index: 1
+      name: type
+      type: String
+      parentIndexes: 0300000008000000
+      hasSubField: 0
+      possibleFields:
+      - name: name
+        type: String
+      - name: type
+        type: String
+      - name: damage
+        type: Int
+      hasChanged: 0
+    - index: 2
+      name: damage
+      type: Int
+      parentIndexes: 0300000008000000
+      hasSubField: 0
+      possibleFields:
+      - name: name
+        type: String
+      - name: type
+        type: String
+      - name: damage
+        type: Int
+      hasChanged: 0
+    isComplete: 1
+  mutations: []
+  subscriptions: []
+  loading: 0
