@@ -1,10 +1,10 @@
-ARFoundationTest/[Ll]ibrary/
-ARFoundationTest/[Tt]emp/
-ARFoundationTest/[Oo]bj/
-ARFoundationTest/[Bb]uild/
-ARFoundationTest/[Bb]uilds/
-ARFoundationTest/[Ll]ogs/
-ARFoundationTest/[Uu]ser[Ss]ettings/
+AR_Template_Project/[Ll]ibrary/
+AR_Template_Project/[Tt]emp/
+AR_Template_Project/[Oo]bj/
+AR_Template_Project/[Bb]uild/
+AR_Template_Project/[Bb]uilds/
+AR_Template_Project/[Ll]ogs/
+AR_Template_Project/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

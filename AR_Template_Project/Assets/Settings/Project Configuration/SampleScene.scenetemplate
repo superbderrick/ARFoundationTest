@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13966, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SampleScene
+  m_EditorClassIdentifier: 
+  templateScene: {fileID: 102900000, guid: 99c9720ab356a0642a771bea13969a05, type: 3}
+  templateName: AR
+  description: 'A scene configured for AR Development.
+
+
+    This template was created
+    for the Create with AR courses on Unity Learn and does not ship with the editor
+    by default.'
+  preview: {fileID: 2800000, guid: 5843b284d48a6ff4193b606a018b6bd2, type: 3}
+  dependencies:
+  - dependency: {fileID: 7362058668787990055, guid: d8923f7fe0f9746309bfbc68a866e40f,
+      type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 8236c695e72414e7889fb3f4d8226fde, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2100000, guid: d5b24823eb2bd0f4990a6c8dc134fa9f, type: 2}
+    instantiationMode: 0
+  templatePipeline: {fileID: 0}
+  addToDefaults: 0
