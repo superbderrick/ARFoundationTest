@@ -1,10 +1,10 @@
-GraphQLUnity/[Ll]ibrary/
-GraphQLUnity/[Tt]emp/
-GraphQLUnity/[Oo]bj/
-GraphQLUnity/[Bb]uild/
-GraphQLUnity/[Bb]uilds/
-GraphQLUnity/[Ll]ogs/
-GraphQLUnity/[Uu]ser[Ss]ettings/
+ARFoundationTest/[Ll]ibrary/
+ARFoundationTest/[Tt]emp/
+ARFoundationTest/[Oo]bj/
+ARFoundationTest/[Bb]uild/
+ARFoundationTest/[Bb]uilds/
+ARFoundationTest/[Ll]ogs/
+ARFoundationTest/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
